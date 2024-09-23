@@ -1,0 +1,7 @@
+/* RestaurantsList.css */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Hoặc chiều cao bạn muốn */
+    object-fit: cover; /* Cắt hoặc co dãn ảnh để vừa khung */
+}
+  

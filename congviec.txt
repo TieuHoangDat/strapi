@@ -1,0 +1,20 @@
+10/9:
+- đăng nhập, đăng xuất
+- xem danh sách nhà hàng, tìm theo tên nhà hàng
+- thêm review
+
+11/9:
+- lọc restaurant theo category
+- edit review
+- trang about us
+- tính rating trung bình dùng Lifecycle hooks
+- deploy trên strapi cloud
+
+17/9:
+- tìm hiểu về Email plugin
+- tìm hiểu về Internationalization (i18n) plugin
+
+18/9:
+- Thêm tính năng quên mật khẩu và thay đổi mật khẩu
+- Tìm hiểu về Documentation plugin
+- Tìm hiểu về Graphql

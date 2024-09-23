@@ -1,0 +1,4 @@
+.large-img {
+    width: 100%; /* Hoặc đặt kích thước cụ thể theo ý muốn, ví dụ: 600px */
+    height: auto;
+}
