@@ -18,3 +18,18 @@
 - Thêm tính năng quên mật khẩu và thay đổi mật khẩu
 - Tìm hiểu về Documentation plugin
 - Tìm hiểu về Graphql
+
+23/9:
+- Thêm tính năng đăng nhập bằng github
+- Chạy dự án strapi, week_4, week_5 trên docker
+
+24/9:
+Thêm tính năng đăng nhập bằng google
+Thêm tính năng đăng kí dùng Email validation
+Tìm hiểu về Admin panel customization
+
+mai:
+upgrade
+sentry
+data manager
+custom controller

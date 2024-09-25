@@ -36,6 +36,14 @@ const Login = () => {
     }
   };
 
+  const handleLoginGithub = () => {
+    window.location.href = 'http://localhost:1337/api/connect/github';
+  };
+
+  const handleLoginGoogle = () => {
+    window.location.href = 'http://localhost:1337/api/connect/google';
+  };
+
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
@@ -66,9 +74,19 @@ const Login = () => {
               {errorMessage && <p className="text-danger">{errorMessage}</p>}
               <button type="submit" className="btn btn-primary w-100">Đăng nhập</button>
             </form>
+            <button type="submit" className="btn btn-primary w-100 mt-3" onClick={handleLoginGithub}>
+              Đăng nhập với GitHub
+            </button>
+            <button type="submit" className="btn btn-primary w-100 mt-3" onClick={handleLoginGoogle}>
+              Đăng nhập với Google
+            </button>
             <div className="text-center mt-3">
               {/* Thêm đường dẫn đến trang quên mật khẩu */}
               <Link to="/forget-password">Quên mật khẩu?</Link>
+            </div>
+            <div className="text-center mt-3">
+              {/* Thêm đường dẫn đến trang quên mật khẩu */}
+              <Link to="/register">Đăng kí tài khoản</Link>
             </div>
           </div>
         </div>
