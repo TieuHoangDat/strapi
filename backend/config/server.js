@@ -6,5 +6,8 @@ module.exports = ({ env }) => ({
   },
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
+    defaultHeaders: {
+      'api_key': 'YOUR_SECRET_API_KEY',
+    },
   },
 });

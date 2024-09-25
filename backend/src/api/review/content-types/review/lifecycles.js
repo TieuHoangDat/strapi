@@ -39,18 +39,12 @@ module.exports = {
         });
         // console.log(entries)
 
-        const ratingMapping = {
-            one: 1,
-            two: 2,
-            three: 3,
-            four: 4,
-            five: 5
-        };
+
           
           // Tính toán trung bình rating
         const calculateAverageRating = (reviews) => {
             const totalRatings = reviews.reduce((acc, review) => {
-                const ratingValue = ratingMapping[review.rating.toLowerCase()]; // Chuyển chuỗi 'five' thành 5
+                const ratingValue = review.rating; // Chuyển chuỗi 'five' thành 5
                 return acc + (ratingValue || 0); // Nếu không có giá trị, mặc định là 0
             }, 0);
             
@@ -81,18 +75,12 @@ module.exports = {
         });
         console.log(entries)
 
-        const ratingMapping = {
-            one: 1,
-            two: 2,
-            three: 3,
-            four: 4,
-            five: 5
-        };
+
           
           // Tính toán trung bình rating
         const calculateAverageRating = (reviews) => {
             const totalRatings = reviews.reduce((acc, review) => {
-                const ratingValue = ratingMapping[review.rating.toLowerCase()]; // Chuyển chuỗi 'five' thành 5
+                const ratingValue = review.rating; // Chuyển chuỗi 'five' thành 5
                 return acc + (ratingValue || 0); // Nếu không có giá trị, mặc định là 0
             }, 0);
             

@@ -16,17 +16,6 @@
       "type": "string",
       "required": true
     },
-    "rating": {
-      "type": "enumeration",
-      "enum": [
-        "one",
-        "two",
-        "three",
-        "four",
-        "five"
-      ],
-      "required": true
-    },
     "restaurant": {
       "type": "relation",
       "relation": "manyToOne",
@@ -38,6 +27,11 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "reviews"
+    },
+    "rating": {
+      "type": "integer",
+      "max": 5,
+      "min": 1
     }
   }
 }

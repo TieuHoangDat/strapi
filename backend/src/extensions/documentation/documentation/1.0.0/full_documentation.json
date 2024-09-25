@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-09-24T15:15:47.029Z"
+    "x-generation-date": "2024-09-25T09:33:17.011Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1422,16 +1422,6 @@
                                       "content": {
                                         "type": "string"
                                       },
-                                      "rating": {
-                                        "type": "string",
-                                        "enum": [
-                                          "one",
-                                          "two",
-                                          "three",
-                                          "four",
-                                          "five"
-                                        ]
-                                      },
                                       "restaurant": {
                                         "type": "object",
                                         "properties": {
@@ -1723,6 +1713,9 @@
                                           }
                                         }
                                       },
+                                      "rating": {
+                                        "type": "integer"
+                                      },
                                       "createdAt": {
                                         "type": "string",
                                         "format": "date-time"
@@ -1780,6 +1773,7 @@
                           "type": "number",
                           "format": "float"
                         },
+                        "location": {},
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -1974,7 +1968,8 @@
               "rating": {
                 "type": "number",
                 "format": "float"
-              }
+              },
+              "location": {}
             }
           }
         }
@@ -2901,16 +2896,6 @@
                                                     "content": {
                                                       "type": "string"
                                                     },
-                                                    "rating": {
-                                                      "type": "string",
-                                                      "enum": [
-                                                        "one",
-                                                        "two",
-                                                        "three",
-                                                        "four",
-                                                        "five"
-                                                      ]
-                                                    },
                                                     "restaurant": {
                                                       "type": "object",
                                                       "properties": {
@@ -3202,6 +3187,9 @@
                                                         }
                                                       }
                                                     },
+                                                    "rating": {
+                                                      "type": "integer"
+                                                    },
                                                     "createdAt": {
                                                       "type": "string",
                                                       "format": "date-time"
@@ -3259,6 +3247,7 @@
                                         "type": "number",
                                         "format": "float"
                                       },
+                                      "location": {},
                                       "createdAt": {
                                         "type": "string",
                                         "format": "date-time"
@@ -3393,6 +3382,7 @@
             "type": "number",
             "format": "float"
           },
+          "location": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -3485,23 +3475,12 @@
         "properties": {
           "data": {
             "required": [
-              "content",
-              "rating"
+              "content"
             ],
             "type": "object",
             "properties": {
               "content": {
                 "type": "string"
-              },
-              "rating": {
-                "type": "string",
-                "enum": [
-                  "one",
-                  "two",
-                  "three",
-                  "four",
-                  "five"
-                ]
               },
               "restaurant": {
                 "oneOf": [
@@ -3524,6 +3503,9 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "rating": {
+                "type": "integer"
               }
             }
           }
@@ -3578,22 +3560,11 @@
       "Review": {
         "type": "object",
         "required": [
-          "content",
-          "rating"
+          "content"
         ],
         "properties": {
           "content": {
             "type": "string"
-          },
-          "rating": {
-            "type": "string",
-            "enum": [
-              "one",
-              "two",
-              "three",
-              "four",
-              "five"
-            ]
           },
           "restaurant": {
             "type": "object",
@@ -4364,16 +4335,6 @@
                                     "content": {
                                       "type": "string"
                                     },
-                                    "rating": {
-                                      "type": "string",
-                                      "enum": [
-                                        "one",
-                                        "two",
-                                        "three",
-                                        "four",
-                                        "five"
-                                      ]
-                                    },
                                     "restaurant": {
                                       "type": "object",
                                       "properties": {
@@ -4665,6 +4626,9 @@
                                         }
                                       }
                                     },
+                                    "rating": {
+                                      "type": "integer"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -4722,6 +4686,7 @@
                         "type": "number",
                         "format": "float"
                       },
+                      "location": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -4790,6 +4755,9 @@
                 }
               }
             }
+          },
+          "rating": {
+            "type": "integer"
           },
           "createdAt": {
             "type": "string",

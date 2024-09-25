@@ -10,7 +10,7 @@ const RestaurantDetail = () => {
   const [restaurant, setRestaurant] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [newReview, setNewReview] = useState({ content: '', rating: '' });
+  const [newReview, setNewReview] = useState({ content: '', rating: 5 });
   const [error, setError] = useState('');
   const [userReview, setUserReview] = useState(null); // Track the user's existing review
 
@@ -69,7 +69,7 @@ const RestaurantDetail = () => {
           {
             data: {
               content: newReview.content,
-              rating: newReview.rating,
+              rating: parseInt(newReview.rating),
               restaurant: id,
               users_permissions_user: parseInt(userId), 
             },
@@ -80,6 +80,17 @@ const RestaurantDetail = () => {
             },
           }
         );
+        // Gửi mail
+        // Có thể thêm phần gửi mail vào lifecycles hook, nhưng đang demo controller customization :)
+        await axios.post(
+          `http://localhost:1337/api/custom`,
+          {
+            data: {
+              restaurant: id,
+              users_permissions_user: parseInt(userId), 
+            },
+          },
+        );
       } else {
         // If no review exists, create a new one
         await axios.post(
@@ -87,7 +98,7 @@ const RestaurantDetail = () => {
           {
             data: {
               content: newReview.content,
-              rating: newReview.rating,
+              rating: parseInt(newReview.rating),
               restaurant: id,
               users_permissions_user: parseInt(userId), // Thay đổi thành ID người dùng hiện tại
             },
@@ -183,11 +194,11 @@ const RestaurantDetail = () => {
                   required
                 >
                   <option value="">Chọn đánh giá</option>
-                  <option value="one">1</option>
-                  <option value="two">2</option>
-                  <option value="three">3</option>
-                  <option value="four">4</option>
-                  <option value="five">5</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
                 </select>
               </div>
               {error && <p className="text-danger">{error}</p>}

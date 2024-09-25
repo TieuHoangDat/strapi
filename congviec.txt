@@ -24,12 +24,10 @@
 - Chạy dự án strapi, week_4, week_5 trên docker
 
 24/9:
-Thêm tính năng đăng nhập bằng google
-Thêm tính năng đăng kí dùng Email validation
-Tìm hiểu về Admin panel customization
+- Thêm tính năng đăng nhập bằng google
+- Thêm tính năng đăng kí dùng Email validation
+- Tìm hiểu về Admin panel customization
 
-mai:
-upgrade
-sentry
-data manager
-custom controller
+25/9:
+Tìm hiểu về controller customization
+Tìm hiểu về webhook
